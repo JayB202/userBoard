@@ -19,8 +19,8 @@ public class BoardController {
     private final BoardService boardService;
 
     @PostMapping("/posts/new_post")
-    public BoardResponseDto newBoard(@RequestBody BoardRequestDto boardRequestDto, HttpServletRequest httpServletRequest){
-        return boardRequestDto.newBoard(boardRequestDto, httpServletRequest);
+    public BoardResponseDto createBoard(@RequestBody BoardRequestDto boardRequestDto, HttpServletRequest httpServletRequest){
+        return new boardService.createBoard(boardRequestDto, httpServletRequest);
     }
 
 
